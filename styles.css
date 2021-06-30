@@ -63,3 +63,8 @@ main{
 .wishlistLabel{
     font-size: 18px;
 }
+#showItemsSelect{
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #adadad;
+}

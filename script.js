@@ -104,15 +104,34 @@ function showElements(){
 let input = document.querySelector('.s-input');
 
 function productsByInput(){
+    let select = document.getElementById('showItemsSelect');
     for (let i = 0; i < prods.length; i++) {
-        if (!prods[i].id.includes(input.value)){
-            prods[i].style.display = 'none';
-        } else {
-            prods[i].style.display = 'block';
+        switch (select.value){
+            case 'ID':{
+                if (!prods[i].id.includes(input.value)){
+                    prods[i].style.display = 'none';
+                } else {
+                    prods[i].style.display = 'block';
+                }
+            } break;
+            case 'Name':{
+                if (!prods[i].firstChild.innerText.includes(input.value)){
+                    prods[i].style.display = 'none';
+                } else {
+                    prods[i].style.display = 'block';
+                }
+            } break;
+            case 'Badge':{
+                if (!prods[i].lastChild.innerText.includes(input.value)){
+                    prods[i].style.display = 'none';
+                } else {
+                    prods[i].style.display = 'block';
+                }
+            }
         }
+
     }
 }
-
 function wishList(){
     if (this.checked){
         this.setAttribute('checked','checked');
