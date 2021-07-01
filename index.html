@@ -11,7 +11,16 @@
 <body>
 <header class="s-header">
     <h1 class="s-header-text">Shop</h1>
-    <button class="s-btn">Show products</button>
+    <div class="new-el">
+        <h3>Add new product</h3>
+        <form>
+        <label>Name:<input type="text" class="new-el-input name-input"></label>
+        <label>Price:<input type="text" class="new-el-input price-input"></label>
+        <label>Badge:<input type="text" class="new-el-input badge-input"></label>
+        <button class="s-btn">Add</button>
+        </form>
+    </div>
+    <button class="s-wishlist-btn">Wishlist</button>
     <div>
     <select id="showItemsSelect">
         <option>Badge</option>

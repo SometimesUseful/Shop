@@ -17,7 +17,7 @@ main{
     font-size: 48px;
     color: #767676;
 }
-.s-btn{
+.s-btn, .s-wishlist-btn{
     background-color: #ffffeb;
     height: 40px;
     width: 140px;
@@ -25,7 +25,7 @@ main{
     border-radius: 5px;
     margin-top: 10px;
 }
-.s-btn:hover{
+.s-btn:hover, .s-wishlist-btn:hover{
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 }
 .s-input{
@@ -67,4 +67,11 @@ main{
     height: 30px;
     border-radius: 3px;
     border: 1px solid #adadad;
+}
+.new-el{
+    display: flex;
+    flex-direction: column;
+}
+.new-el-input{
+    display: flex;
 }
