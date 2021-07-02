@@ -118,7 +118,7 @@ function addToWishlist(obj){
         this.parentNode.firstChild.innerText = 'Add to wishlist';
         }
 }
-let a;
+
 function showWishlistProducts(obj){
     let wishlistObj = {};
     let keys = Object.keys(obj);
@@ -126,7 +126,6 @@ function showWishlistProducts(obj){
         if (obj[keys[i]].wishlisted === true){
             let newProd = createProduct(obj[keys[i]].name,obj[keys[i]].price,obj[keys[i]].badge, keys[i],obj[keys[i]].wishlisted);
             Object.assign(wishlistObj,newProd);
-            a=wishlistObj;
         }
     }
     showElements(wishlistObj);
@@ -165,19 +164,13 @@ function createProduct(name,pricing,productBadge,id,isWishlisted){
         wish.removeAttribute('checked');
         spanForLabel.innerText = 'Add to wishlist';
     } else {
-
         wish.checked = true;
-
         wish.setAttribute('checked','checked');
-
         spanForLabel.innerText = 'Added to wishlist';
-
-
     }
+
     labelForWish.append(wish);
-
     product.append(labelForWish);
-
 
     let price = document.createElement('p');
     price.classList.add('price');
