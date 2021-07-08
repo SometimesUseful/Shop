@@ -201,7 +201,7 @@ function createProduct(name,pricing,productBadge,id,isWishlisted){
             name: name,
             price: pricing,
             badge: productBadge,
-            wishListed: isWishlisted
+            wishlisted: isWishlisted
         }
     }
 }
